@@ -16,7 +16,7 @@ const startButton = document.getElementById('startButton');
 // Обработчики событий для кнопок
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-size = [1480, 920];
+size = [window.innerWidth, window.innerHeight];
 
 livesCount = 3;
 
@@ -37,7 +37,7 @@ pressedButtons = {
 let audio = new Audio('./main_theme.mp3');
 function playAudio() {
 
-  audio.volume = 0.2;
+  audio.volume = 0.9;
   audio.loop = true;
   audio.play();
 }
@@ -231,7 +231,7 @@ function startGame() {
     scoreString = "Your Score: " + String(score);
     ctx.font = fontsize + "px ScoreShrift";
     ctx.fillStyle = "White";
-    ctx.fillText(scoreString, size[0]/2 - fontsize *8, size[1] - fontsize * 7 );
+    ctx.fillText(scoreString, size[0]/2 - fontsize *8, size[1] - fontsize * 9 );
   }
 //////////Game Over//////////////////////////////////////////////////////////////////////
 
@@ -254,7 +254,7 @@ all = []
     ctx.font = "75px GameOver"; //название шрифта берется с CSS
 
     ctx.fillStyle = "White";
-    ctx.fillText("GAME OVER" , (size[0]-75*"GAMEOVER".length)/2, size[1]/2);
+    ctx.fillText("GAME OVER" , (size[0]-75*"GAMEOVER".length)/2, (size[1]/2) - 75);
 
 
     GameOverHeart.isDraw = true; // огонек в конце игры
