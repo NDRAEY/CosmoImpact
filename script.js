@@ -703,7 +703,7 @@ new Sprite({
 ///////Test enemies///////////////////////////////
 let Enm = new Enemy({
   ctx: canvas.getContext('2d'),
-  imgSrc: './img/enemy.png',
+  imgSrc: './img/Enemy.png',
   width: 100,
   height: 100,
   x: 100,
@@ -715,7 +715,7 @@ let Enm = new Enemy({
 
 let Enm2 = new Enemy({
   ctx: canvas.getContext('2d'),
-  imgSrc: './img/enemy.png',
+  imgSrc: './img/Enemy.png',
   width: 100,
   height: 100,
   x: 800,
